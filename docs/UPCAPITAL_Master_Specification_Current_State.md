@@ -2,6 +2,8 @@
 
 > **Implementation update — September 12, 2026:** Phase 4 public pages are now implemented. The homepage has shared glass navigation, a shared footer, cleaned public copy and interactive performance periods. Existing business details were retained at the owner's express request; public development labels were removed. Phase 5 authentication is next. See `docs/PHASE_4_PUBLIC_WEBSITE.md` for the current implementation, file inventory, verification and remaining boundaries. Phase-status statements below describe the earlier handoff snapshot; product direction remains applicable unless superseded by the owner's instructions.
 
+> **Phase 5 update — September 12, 2026:** Authentication routes, server actions, protected account access and TOTP integration are implemented and connected to the owner's new UPCAPITAL Supabase project. Email-provider configuration and successful end-to-end signup/recovery/MFA verification remain pending. Phase 6 has not started. This update supersedes the earlier phase status above. See `docs/PHASE_5_AUTHENTICATION.md` for configuration, verification and remaining work.
+
 **Purpose:** This is the current source-of-truth document for the UPCAPITAL platform. It combines the full product blueprint, current design language, development status, placeholder rules, brand guidance, architecture, roadmap, and explicit instructions for Codex working inside the existing codebase.
 
 ---
@@ -1851,13 +1853,15 @@ Homepage
 
 ## Phase 4
 Remaining Public Pages  
-**NEXT**
+**IMPLEMENTED**
 
 ## Phase 5
 Authentication
+**IMPLEMENTED / EMAIL CONFIGURATION AND LIVE FLOW VERIFICATION PENDING**
 
 ## Phase 6
 Dashboard Foundation
+**NEXT AFTER PHASE 5 VERIFICATION**
 
 ## Phase 7
 Portfolio + Investments

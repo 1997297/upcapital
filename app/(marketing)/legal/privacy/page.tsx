@@ -6,6 +6,10 @@ const content = {
     "How information moves through this public website and how to contact us about privacy.",
   sections: [
     [
+      "Live market quotes",
+      "The homepage embeds TradingView market widgets. Your browser connects directly to TradingView to retrieve quotes and display resources. TradingView receives technical information including your IP address, the embedding page URL, widget type and displayed symbols. Its privacy practices apply to those requests.",
+    ],
+    [
       "Browsing the website",
       "Your browser requests pages and assets from the website hosting infrastructure. Those requests include technical information such as an IP address, browser information and the requested address.",
     ],

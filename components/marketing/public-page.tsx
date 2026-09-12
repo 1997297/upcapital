@@ -36,14 +36,13 @@ export function PublicCTA() {
   return (
     <section className="up-glass mt-16 rounded-3xl p-7 md:p-10">
       <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
-        A clearer view starts with a conversation.
+        Put your capital to work intelligently.
       </h2>
       <p className="mt-4 max-w-2xl leading-7 text-text-secondary">
-        Discuss the platform, your questions and the information you need before taking the next
-        step.
+        Create your account, complete verification and take the next step with UPCAPITAL.
       </p>
-      <Link href="/contact" className="up-link-button mt-7 inline-flex">
-        Contact UPCAPITAL
+      <Link href="/auth/register" className="up-link-button mt-7 inline-flex">
+        Create Account
       </Link>
     </section>
   );

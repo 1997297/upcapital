@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/how-it-works" },
   title: "How It Works",
   description:
-    "From your first conversation to reviewing performance, a clear process helps you make informed decisions.",
+    "From creating your account to reviewing performance, a clear process helps you make informed decisions.",
 };
 const sections = [
   [
-    "01 / Discuss your account",
-    "Start with our team. Understand availability, eligibility and the information needed to decide whether UPCAPITAL fits your requirements.",
+    "01 / Create your account",
+    "Sign up with your details to begin your UPCAPITAL account journey. Review the terms and confirm your email before continuing.",
   ],
   [
     "02 / Review and verify",
@@ -31,7 +31,7 @@ export default function Page() {
     <PublicPage
       eyebrow="Your investment journey"
       title="Understand each step before you begin."
-      description="From your first conversation to reviewing performance, a clear process helps you make informed decisions."
+      description="From creating your account to reviewing performance, a clear process helps you make informed decisions."
     >
       <div className="grid gap-5 md:grid-cols-2">
         {sections.map(([title, text]) => (

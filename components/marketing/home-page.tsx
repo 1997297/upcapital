@@ -1,10 +1,10 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { MarketingNavbar } from "./marketing-navbar";
 import { MarketingFooter } from "./marketing-footer";
 import { PerformancePanel } from "./performance-panel";
+import { ScenarioCalculator } from "./scenario-calculator";
+import { LiveMarketPrices } from "./live-market-prices";
 import { faq, strategies } from "@/lib/constants/marketing";
 
 const testimonials = [
@@ -29,16 +29,6 @@ const testimonials = [
 ];
 
 export function HomePage() {
-  const [amount, setAmount] = useState(10000);
-  const [scenario, setScenario] = useState("Moderate");
-  const [months, setMonths] = useState(12);
-  const scenarioRate: { [k: string]: number } = {
-    Conservative: 0.1,
-    Moderate: 0.18,
-    Aggressive: 0.28,
-  };
-  const projected = amount * Math.pow(1 + scenarioRate[scenario], months / 12);
-
   return (
     <div className="up-site">
       <MarketingNavbar />
@@ -62,10 +52,10 @@ export function HomePage() {
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link
-                  href="/contact"
+                  href="/auth/register"
                   className="rounded-xl bg-[#b8ff00] px-6 py-3.5 font-extrabold text-[#07101f] transition hover:-translate-y-0.5"
                 >
-                  Discuss your account
+                  Create Account
                 </Link>
                 <a
                   href="#performance"
@@ -304,6 +294,7 @@ export function HomePage() {
                 </article>
               ))}
             </div>
+            <LiveMarketPrices />
           </div>
         </section>
 
@@ -451,83 +442,7 @@ export function HomePage() {
             </div>
           </div>
         </section>
-
-        {/* CALCULATOR */}
-        <section className="up-section">
-          <div className="up-container">
-            <div className="up-glass grid gap-12 rounded-[30px] p-7 md:p-10 lg:grid-cols-[.9fr_1.1fr] lg:p-12">
-              <div>
-                <p className="up-kicker">Scenario calculator</p>
-                <h2 className="up-title mt-4">Explore an illustrative portfolio scenario.</h2>
-                <p className="up-body mt-5">
-                  Compare capital amounts, scenario assumptions and investment periods. These
-                  calculations are illustrative, not forecasts.
-                </p>
-              </div>
-              <div className="space-y-5">
-                <label className="block text-sm text-[#c5ccda]">
-                  Investment amount (USD)
-                  <input
-                    type="number"
-                    min={0}
-                    max={1000000000}
-                    value={amount}
-                    onChange={(e) =>
-                      setAmount(Math.min(1000000000, Math.max(0, Number(e.target.value) || 0)))
-                    }
-                    className="up-number mt-2 w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3.5 text-white outline-none transition focus:border-[#b8ff00]/45"
-                  />
-                </label>
-                <div className="grid grid-cols-2 gap-3">
-                  <label className="text-sm text-[#c5ccda]">
-                    Scenario
-                    <select
-                      value={scenario}
-                      onChange={(e) => setScenario(e.target.value)}
-                      className="mt-2 w-full rounded-xl border border-white/10 bg-[#0d1220] px-4 py-3.5 outline-none"
-                    >
-                      {["Conservative", "Moderate", "Aggressive"].map((x) => (
-                        <option key={x}>{x}</option>
-                      ))}
-                    </select>
-                  </label>
-                  <label className="text-sm text-[#c5ccda]">
-                    Period
-                    <select
-                      value={months}
-                      onChange={(e) => setMonths(Number(e.target.value))}
-                      className="mt-2 w-full rounded-xl border border-white/10 bg-[#0d1220] px-4 py-3.5 outline-none"
-                    >
-                      {[3, 6, 12].map((x) => (
-                        <option key={x} value={x}>
-                          {x} months
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                </div>
-                <div className="rounded-2xl border border-[#b8ff00]/15 bg-[#b8ff00]/[.04] p-5">
-                  <div className="flex items-center justify-between gap-5">
-                    <div>
-                      <p className="text-xs text-[#8b95a9]">Illustrative projected value</p>
-                      <p className="up-number mt-2 text-3xl font-semibold">
-                        ${projected.toLocaleString("en-US", { maximumFractionDigits: 2 })}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-xs text-[#8b95a9]">Scenario</p>
-                      <p className="mt-2 font-semibold text-[#b8ff00]">{scenario}</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-[11px] leading-5 text-[#657087]">
-                  Illustrative calculation only. This result does not represent an expected or
-                  guaranteed return.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ScenarioCalculator />
 
         {/* TESTIMONIALS */}
         <section className="up-section border-y border-white/6 bg-white/[.012]">
@@ -624,15 +539,15 @@ export function HomePage() {
                 <p className="up-kicker">Start with UPCAPITAL</p>
                 <h2 className="up-title mt-4">Make your capital work smarter.</h2>
                 <p className="up-body mt-5">
-                  Speak with our team about a portfolio experience built around strategy visibility
+                  Create your account for a portfolio experience built around strategy visibility
                   and transparent reporting.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
-                    href="/contact"
+                    href="/auth/register"
                     className="rounded-xl bg-[#b8ff00] px-6 py-3.5 font-extrabold text-[#07101f]"
                   >
-                    Discuss your account
+                    Create Account
                   </Link>
                   <Link
                     href="/contact"

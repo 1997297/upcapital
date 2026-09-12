@@ -6,6 +6,10 @@ const content = {
     "Information about browser storage and your choices on the UPCAPITAL public website.",
   sections: [
     [
+      "Market widgets",
+      "TradingView supplies the embedded market quotes. TradingView states that its widgets do not set cookies, but process technical connection information to deliver the feed. The widgets load automatically when you visit the homepage.",
+    ],
+    [
       "Current public-site features",
       "The public pages do not intentionally set advertising cookies or use third-party analytics scripts. The navigation menu, performance filters and calculator use temporary page state.",
     ],

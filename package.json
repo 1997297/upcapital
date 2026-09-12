@@ -8,13 +8,18 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test:auth": "node --experimental-strip-types --test --test-isolation=none tests/auth-validation.test.mjs",
+    "test:auth:routes": "node --test --test-isolation=none tests/auth-routes.test.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.116.0",
     "next": "16.3.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "zod": "4.6.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.0",

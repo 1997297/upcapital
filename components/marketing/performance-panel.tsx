@@ -29,6 +29,7 @@ export function PerformancePanel() {
           {["1Y", "3Y", "ALL"].map((value) => (
             <Button
               key={value}
+              type="button"
               size="sm"
               variant={value === period ? "primary" : "outline"}
               aria-pressed={value === period}

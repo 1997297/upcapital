@@ -93,9 +93,14 @@ export function MarketingNavbar() {
             </Link>
           ))}
         </nav>
-        <Link href="/contact" className="up-link-button hidden xl:inline-flex">
-          Get in touch
-        </Link>
+        <div className="hidden shrink-0 items-center gap-4 xl:flex">
+          <Link href="/auth/login" className="up-nav-link px-2 py-3">
+            Sign In
+          </Link>
+          <Link href="/auth/register" className="up-link-button inline-flex">
+            Create Account
+          </Link>
+        </div>
         <button
           ref={toggleRef}
           type="button"
@@ -133,6 +138,22 @@ export function MarketingNavbar() {
                 {label}
               </Link>
             ))}
+            <div className="mt-6 grid grid-cols-2 gap-3">
+              <Link
+                href="/auth/login"
+                onClick={() => setOpen(false)}
+                className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/15 px-3 py-3 text-sm font-semibold"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="/auth/register"
+                onClick={() => setOpen(false)}
+                className="up-link-button inline-flex px-3"
+              >
+                Create Account
+              </Link>
+            </div>
           </nav>
         </div>
       )}

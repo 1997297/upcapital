@@ -50,8 +50,8 @@ export const faq = [
     "No. Returns vary and capital is at risk. Historical performance and scenario calculations do not guarantee future results.",
   ],
   [
-    "How can I discuss opening an account?",
-    "Contact our team to discuss account availability, eligibility, verification requirements and the next steps before committing funds.",
+    "How do I open an account?",
+    "Choose Create Account to sign up, confirm your email and continue with account verification. Review the strategy and account terms before committing funds.",
   ],
   [
     "What should I review before investing?",
