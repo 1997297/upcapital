@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1220"/><stop offset="1" stop-color="#080b14"/></linearGradient>
+      <radialGradient id="r" cx=".8" cy=".2" r=".7"><stop stop-color="#7456e8" stop-opacity=".32"/><stop offset="1" stop-color="#7456e8" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1200" height="760" rx="42" fill="url(#bg)"/>
+    <rect width="1200" height="760" rx="42" fill="url(#r)"/>
+    <g opacity=".16" stroke="#fff">
+      <path d="M0 80H1200"/><path d="M0 160H1200"/><path d="M0 240H1200"/><path d="M0 320H1200"/><path d="M0 400H1200"/><path d="M0 480H1200"/><path d="M0 560H1200"/><path d="M0 640H1200"/><path d="M0 720H1200"/>
+      <path d="M80 0V760"/><path d="M160 0V760"/><path d="M240 0V760"/><path d="M320 0V760"/><path d="M400 0V760"/><path d="M480 0V760"/><path d="M560 0V760"/><path d="M640 0V760"/><path d="M720 0V760"/><path d="M800 0V760"/><path d="M880 0V760"/><path d="M960 0V760"/><path d="M1040 0V760"/><path d="M1120 0V760"/>
+    </g>
+    <path d="M90 585 C210 520 255 545 345 450 S520 350 600 405 S730 300 805 325 S930 170 1110 205" fill="none" stroke="#b8ff00" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="1110" cy="205" r="12" fill="#b8ff00"/>
+    <text x="90" y="120" font-family="Arial,sans-serif" font-size="25" fill="#b8ff00" letter-spacing="4">UPCAPITAL</text>
+    <text x="90" y="180" font-family="Arial,sans-serif" font-weight="700" font-size="54" fill="#f7f8fc">Security Infrastructure</text>
+    <text x="90" y="230" font-family="Arial,sans-serif" font-size="24" fill="#9da7bc">Authentication • audit trails • protected workflows</text>
+    </svg>

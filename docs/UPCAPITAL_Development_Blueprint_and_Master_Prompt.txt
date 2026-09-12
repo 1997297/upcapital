@@ -1,0 +1,2692 @@
+UPCAPITAL — FULL PLATFORM DEVELOPMENT BLUEPRINT & MASTER DEVELOPMENT PROMPT
+
+============================================================
+1. WHAT UPCAPITAL SHOULD BECOME
+============================================================
+
+UPCAPITAL should feel like a combination of:
+
+premium fintech website + investment client portal + secure financial dashboard + transparent trading/performance platform.
+
+There are essentially three products inside one system:
+
+1. Public Website
+   - Sell the product
+   - Explain how it works
+   - Build trust
+
+2. Client Cabinet
+   - Allow authenticated users to manage their account and investments
+
+3. Admin Platform
+   - Allow UPCAPITAL staff to operate the business
+
+The project should NOT be built as one giant HTML page.
+
+Important:
+Claims such as “98.9% accuracy” and “80% ROI in 30 Days” should not be hard-coded into a production investment platform unless independently substantiated and legally appropriate. Performance numbers, plans and financial disclosures should be administrator-controlled data, not fake/static marketing numbers.
+
+============================================================
+2. RECOMMENDED TECHNOLOGY
+============================================================
+
+Frontend:
+- Next.js 15+
+- TypeScript
+- React
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Recharts
+
+Backend:
+Recommended:
+- Next.js + Supabase + PostgreSQL
+
+Supabase can handle:
+- Authentication
+- Database
+- Row Level Security
+- Storage
+- Realtime data
+- Server functions
+
+A dedicated backend can be introduced later if UPCAPITAL grows.
+
+============================================================
+3. PROJECT ARCHITECTURE
+============================================================
+
+upcapital/
+│
+├── app/
+│   ├── page.tsx
+│   ├── about/
+│   ├── how-it-works/
+│   ├── performance/
+│   ├── security/
+│   ├── faq/
+│   ├── contact/
+│   ├── legal/
+│   │
+│   ├── auth/
+│   │   ├── login/
+│   │   ├── register/
+│   │   ├── forgot-password/
+│   │   ├── reset-password/
+│   │   ├── verify-email/
+│   │   └── 2fa/
+│   │
+│   ├── dashboard/
+│   │   ├── page.tsx
+│   │   ├── portfolio/
+│   │   ├── investments/
+│   │   ├── deposit/
+│   │   ├── withdrawal/
+│   │   ├── transactions/
+│   │   ├── performance/
+│   │   ├── referrals/
+│   │   ├── notifications/
+│   │   ├── support/
+│   │   ├── profile/
+│   │   ├── verification/
+│   │   ├── security/
+│   │   └── settings/
+│   │
+│   └── admin/
+│
+├── components/
+│   ├── ui/
+│   ├── navigation/
+│   ├── dashboard/
+│   ├── charts/
+│   ├── forms/
+│   └── modals/
+│
+├── lib/
+├── hooks/
+├── services/
+├── stores/
+├── types/
+├── utils/
+├── public/
+└── styles/
+
+============================================================
+4. COMPLETE WEBSITE MAP
+============================================================
+
+Public-facing site:
+- Home
+- About UPCAPITAL
+- How It Works
+- Investment / Strategy
+- Performance
+- Security
+- Technology
+- FAQ
+- Contact / Support
+- Login
+- Create Account
+- Legal Pages
+
+Legal Pages:
+- Terms of Service
+- Privacy Policy
+- Cookie Policy
+- Risk Disclosure
+- AML/KYC Policy
+- Refund/Withdrawal Policy
+- Acceptable Use Policy
+
+These should contain real legal terms before launch, not AI-generated placeholders pretending to be legal advice.
+
+============================================================
+5. HOMEPAGE NAVIGATION
+============================================================
+
+Desktop:
+UPCAPITAL
+
+Home
+About
+How It Works
+Performance
+Security
+FAQ
+
+Sign In
+Get Started
+
+Behavior:
+- Transparent over hero
+- After scrolling 40–60px:
+  - background becomes dark glass
+  - backdrop blur increases
+  - subtle bottom border appears
+  - navbar height decreases slightly
+- Transition: about 250–350ms
+
+Mobile:
+- Accessible slide-out menu
+- Proper focus handling
+- ESC to close
+- Prevent background scrolling
+
+============================================================
+6. HERO SECTION
+============================================================
+
+Eyebrow:
+AI-ASSISTED DIGITAL ASSET STRATEGIES
+
+Headline:
+Put your capital
+to work intelligently.
+
+Supporting Copy:
+UPCAPITAL provides technology-driven access to digital-asset strategies with portfolio monitoring, transparent performance reporting and built-in risk controls.
+
+Buttons:
+- Create Account
+- Explore Platform
+
+Trust Information:
+- Secure Infrastructure
+- Transparent Reporting
+- 24/7 Portfolio Monitoring
+
+Hero Visual:
+Do not use a random Bitcoin stock image.
+
+Create a financial visualization on the right:
+- Portfolio Balance
+- $24,820.42
+- +8.42%
+- animated performance graph
+- BTC +2.8%
+- ETH +1.9%
+- SOL +4.3%
+
+This is illustrative/demo data until connected to real data.
+
+Hero Animations:
+- Logo → fade
+- Navigation → fade down
+- Eyebrow → fade upward
+- Headline → staggered fade upward
+- Paragraph → fade
+- Buttons → fade
+- Dashboard mockup → slide from right + scale
+- Chart line → draw animation
+
+Total animation:
+about 1–1.5 seconds.
+
+Avoid excessive animation.
+
+============================================================
+7. TRUST / CREDIBILITY STRIP
+============================================================
+
+BUILT FOR TRANSPARENCY
+
+Items:
+- Portfolio Tracking
+- Risk Monitoring
+- Secure Access
+- Performance Analytics
+- 24/7 Infrastructure
+
+A subtle scrolling marquee is acceptable if not distracting.
+
+============================================================
+8. PLATFORM OVERVIEW
+============================================================
+
+Headline:
+Everything you need to understand your capital.
+
+Cards:
+1. Portfolio Intelligence
+2. Strategy Monitoring
+3. Risk Management
+4. Transparent Reporting
+
+Cards should use soft glassmorphism.
+
+Hover:
+- translateY(-4px)
+- border brightens
+- subtle glow
+
+============================================================
+9. HOW UPCAPITAL WORKS
+============================================================
+
+4-step interactive timeline:
+
+01 Create Your Account
+02 Verify Your Identity
+03 Fund Your Account
+04 Monitor Your Portfolio
+
+Desktop:
+horizontal
+
+Mobile:
+vertical
+
+Animate the connecting line as the section enters the viewport.
+
+============================================================
+10. TECHNOLOGY SECTION
+============================================================
+
+Title:
+Technology working behind the strategy.
+
+Show:
+- Market Data Processing
+- Portfolio Analysis
+- Risk Algorithms
+- Trade Monitoring
+- Reporting Infrastructure
+
+Include an abstract animated network visualization.
+
+Avoid unsupported claims such as:
+- 98.9% guaranteed accuracy
+- guaranteed returns
+- risk free
+
+============================================================
+11. PERFORMANCE SECTION
+============================================================
+
+Show:
+- Portfolio growth chart
+- Monthly return chart
+- Drawdown
+- Historical periods
+- Performance table
+
+Filters:
+- 1M
+- 3M
+- 6M
+- 1Y
+- ALL
+
+Admin controls the real dataset.
+
+Always include:
+Past performance does not guarantee future results.
+
+============================================================
+12. RISK MANAGEMENT SECTION
+============================================================
+
+Visual concept:
+shield / protection visualization
+
+Show:
+- Capital Allocation
+- Position Limits
+- Drawdown Monitoring
+- Portfolio Diversification
+- Exposure Controls
+
+This should be one of the strongest trust-building sections.
+
+============================================================
+13. SECURITY SECTION
+============================================================
+
+Show:
+- Encrypted Data
+- Secure Authentication
+- 2FA
+- Session Management
+- Withdrawal Verification
+- Activity Monitoring
+
+Use security-oriented visual elements rather than stock photography.
+
+============================================================
+14. ROI / PROJECTION CALCULATOR
+============================================================
+
+Do not simply calculate a fixed 80% return.
+
+Inputs:
+- Investment
+- Scenario
+  - Conservative
+  - Moderate
+  - Aggressive
+- Estimated Period
+  - 3 Months
+  - 6 Months
+  - 12 Months
+
+Results should clearly say:
+Illustrative projection only.
+Not a guarantee of future performance.
+
+============================================================
+15. TESTIMONIALS
+============================================================
+
+Only use authentic testimonials.
+
+Cards:
+- Avatar
+- Name
+- Country
+- Rating if legitimately used
+- Testimonial
+
+Use an elegant horizontal carousel.
+
+Do not fabricate:
+- investors
+- withdrawal claims
+- profit screenshots
+
+============================================================
+16. FAQ
+============================================================
+
+Questions:
+- What is UPCAPITAL?
+- How does the strategy work?
+- What assets are used?
+- Can I withdraw my funds?
+- What fees apply?
+- How is risk managed?
+- Is performance guaranteed?
+- How are accounts secured?
+- How long does verification take?
+- How do I contact support?
+
+Use an accessible accordion interface.
+
+============================================================
+17. FINAL CTA
+============================================================
+
+Headline:
+Make your capital work smarter.
+
+Copy:
+Create your UPCAPITAL account and gain access to technology-driven portfolio management.
+
+CTA:
+Create Account
+
+Use subtle animated background gradients.
+
+============================================================
+18. FOOTER
+============================================================
+
+Columns:
+
+UPCAPITAL
+
+Platform
+- How It Works
+- Performance
+- Technology
+- Security
+
+Company
+- About
+- Contact
+- Careers
+
+Resources
+- FAQ
+- Help Center
+
+Legal
+- Terms
+- Privacy
+- Risk Disclosure
+- AML Policy
+- Cookie Policy
+
+Bottom:
+© 2026 UPCAPITAL
+
+Digital assets involve risk.
+Capital may be lost.
+
+============================================================
+19. AUTHENTICATION
+============================================================
+
+Registration:
+Step 1:
+- First Name
+- Last Name
+- Email
+- Password
+- Confirm Password
+
+Step 2:
+- Country
+- Phone Number
+
+Step 3:
+- Accept Terms
+- Accept Risk Disclosure
+
+Then:
+- Email verification
+
+Login:
+Split-screen design.
+
+Left:
+- Branding / visual
+
+Right:
+- Welcome back
+- Email
+- Password
+- Remember Me
+- Forgot Password
+- Sign In
+- Create Account
+
+Add:
+- 2FA
+
+Google authentication can be optional.
+
+============================================================
+20. CLIENT DASHBOARD
+============================================================
+
+Desktop:
+Top Navigation
+Sidebar
+Main Content
+
+Sidebar:
+- Overview
+- Portfolio
+- Investments
+- Deposit
+- Withdraw
+- Transactions
+- Performance
+- Referrals
+- Notifications
+- Support
+- Verification
+- Profile
+- Security
+- Settings
+- Logout
+
+============================================================
+21. DASHBOARD OVERVIEW
+============================================================
+
+Greeting:
+Good morning, Emmanuel
+Here's an overview of your portfolio.
+
+Cards:
+- Portfolio Value
+- Invested Capital
+- Total Return
+- Available Balance
+
+Main Graph:
+Portfolio Performance
+
+Filters:
+- 1D
+- 7D
+- 1M
+- 3M
+- 1Y
+- ALL
+
+Below:
+- Active Investments
+- Recent Transactions
+- Portfolio Allocation
+- Account Status
+
+============================================================
+22. PORTFOLIO PAGE
+============================================================
+
+Show:
+- Total portfolio value
+- Allocation chart
+- Assets
+- Performance
+- Profit/loss
+
+Example Asset Entry:
+BTC
+Allocation 42%
+Value $8,240
+P/L +4.21%
+
+============================================================
+23. INVESTMENTS SECTION
+============================================================
+
+Each strategy should explain:
+- Risk Level
+- Minimum Capital
+- Investment Horizon
+- Strategy
+- Fees
+- Withdrawal Conditions
+- Historical Performance if genuine
+
+Do not present guaranteed profits.
+
+============================================================
+24. DEPOSIT FLOW
+============================================================
+
+Stage 1:
+Choose deposit method
+
+Stage 2:
+Enter amount
+
+Stage 3:
+Payment instructions/provider
+
+Stage 4:
+Confirm transaction
+
+Stage 5:
+Pending/Completed
+
+If crypto deposits are supported:
+- Show network clearly
+- Show wallet address
+- Show QR code
+- Show minimum deposit
+- Warn about correct network
+
+Example:
+USDT
+Network: TRC20
+Address: TXXXXXXXX
+
+Statuses:
+- Awaiting Payment
+- Pending Confirmation
+- Completed
+- Failed
+
+============================================================
+25. WITHDRAWAL FLOW
+============================================================
+
+Fields:
+- Available Balance
+- Amount
+- Currency
+- Wallet / Bank details
+- Fees if any
+- 2FA Confirmation
+
+Button:
+Request Withdrawal
+
+Statuses:
+- Pending
+- Approved
+- Processing
+- Completed
+- Rejected
+
+Every withdrawal needs an audit trail.
+
+============================================================
+26. TRANSACTIONS
+============================================================
+
+Filterable Table:
+- Date
+- Type
+- Amount
+- Method
+- Status
+- Reference
+
+Filters:
+- Deposit
+- Withdrawal
+- Investment
+- Return
+- Fee
+
+Future:
+- Export CSV
+- Export PDF
+
+============================================================
+27. PERFORMANCE DASHBOARD
+============================================================
+
+Charts:
+- Portfolio Value
+- Cumulative Return
+- Monthly Return
+- Drawdown
+- Profit/Loss
+
+Metrics:
+- Net Return
+- Average Monthly Return
+- Maximum Drawdown
+- Current Drawdown
+
+Use actual data only.
+
+============================================================
+28. KYC / VERIFICATION
+============================================================
+
+Statuses:
+- Unverified
+- Pending
+- Verified
+- Rejected
+
+Steps:
+- Personal Information
+- Identification
+- Address Verification
+- Review
+
+Document storage must be secure.
+
+============================================================
+29. PROFILE
+============================================================
+
+Fields:
+- Name
+- Phone
+- Email
+- Country
+- Address
+- Date of Birth
+
+Some verified fields should become locked after approval.
+
+============================================================
+30. SECURITY CENTER
+============================================================
+
+Include:
+- Password change
+- Two-factor authentication
+- Active sessions
+- Login history
+- Devices
+- Withdrawal security
+- Security notifications
+- Sign out of all devices
+
+============================================================
+31. NOTIFICATIONS
+============================================================
+
+Types:
+- Deposit received
+- Withdrawal requested
+- Withdrawal completed
+- Login detected
+- Profile updated
+- Account verified
+- Investment update
+- System announcement
+
+============================================================
+32. SUPPORT CENTER
+============================================================
+
+New Ticket:
+- Category
+- Subject
+- Message
+- Attachment
+
+Statuses:
+- Open
+- Waiting
+- Resolved
+- Closed
+
+Allow support-user conversation threads.
+
+============================================================
+33. REFERRAL SYSTEM
+============================================================
+
+If enabled:
+- Referral Link
+- Referral Code
+- Total Referrals
+- Active Referrals
+- Referral Earnings
+- Referral Transaction History
+
+Do not implement pyramid-style mechanics.
+
+============================================================
+34. ADMIN SYSTEM
+============================================================
+
+Route:
+/admin
+
+Dashboard Metrics:
+- Total Users
+- Verified Users
+- Deposits
+- Withdrawals
+- Assets Under Management
+- Pending Withdrawals
+- Pending Verification
+- Open Support Tickets
+
+============================================================
+35. ADMIN USER MANAGEMENT
+============================================================
+
+Admin can:
+- View users
+- Search users
+- See status
+- Review KYC
+- Suspend accounts
+- View activity
+- Review transactions
+
+Sensitive admin actions must be logged.
+
+============================================================
+36. ADMIN DEPOSITS
+============================================================
+
+Admin sees:
+- Pending Deposits
+- User
+- Amount
+- Method
+- Reference
+- Date
+
+Allow legitimate reconciliation/approval where applicable.
+
+============================================================
+37. ADMIN WITHDRAWALS
+============================================================
+
+Statuses:
+- Pending
+- Approved
+- Processing
+- Completed
+- Rejected
+
+For sensitive actions:
+- Require admin confirmation
+- Consider 2FA
+- Log all status changes
+
+============================================================
+38. PERFORMANCE MANAGEMENT
+============================================================
+
+Admin should be able to add/import real performance data.
+
+Never hard-code fake returns into the frontend.
+
+============================================================
+39. CONTENT MANAGEMENT
+============================================================
+
+Admin should be able to modify:
+- FAQ
+- Announcements
+- Homepage statistics
+- Performance information
+- Support information
+- Investment strategies
+- Maintenance notices
+
+============================================================
+40. AUDIT LOGS
+============================================================
+
+Record:
+- Admin login
+- Account modifications
+- Withdrawal actions
+- Deposit actions
+- KYC review
+- Security changes
+
+Example:
+- Admin ID
+- Action
+- Target
+- IP
+- Timestamp
+- Metadata
+
+============================================================
+41. DATABASE DESIGN
+============================================================
+
+Important tables:
+- users
+- profiles
+- kyc_verifications
+- accounts
+- portfolios
+- portfolio_assets
+- investment_strategies
+- user_investments
+- deposits
+- withdrawals
+- transactions
+- performance_records
+- notifications
+- support_tickets
+- support_messages
+- sessions
+- security_events
+- admin_users
+- audit_logs
+- referrals
+
+Use:
+- Foreign keys
+- Timestamps
+- Indexes
+- Row Level Security
+
+Users must only access their own private data.
+
+============================================================
+42. THEME
+============================================================
+
+Primary Background:
+#080B14
+
+Secondary Surface:
+#0D1220
+
+Elevated Surface:
+#131927
+
+Primary Purple:
+#7456E8
+
+Purple Highlight:
+#986EF5
+
+Electric Cyan:
+#18D5E5
+
+Success:
+#39D98A
+
+Warning:
+#FFB547
+
+Danger:
+#FF5C68
+
+Main Text:
+#F7F8FC
+
+Secondary Text:
+#9DA7BC
+
+Borders:
+rgba(255,255,255,0.08)
+
+============================================================
+43. FONTS
+============================================================
+
+Main UI Font:
+Manrope
+
+Financial/Data Font:
+Inter
+
+Weights:
+- 400
+- 500
+- 600
+- 700
+- 800
+
+For financial numbers:
+font-variant-numeric: tabular-nums;
+
+============================================================
+44. TYPOGRAPHY
+============================================================
+
+Hero:
+clamp(3rem, 6vw, 6rem)
+
+Section Titles:
+clamp(2rem, 4vw, 3.5rem)
+
+Body:
+16–18px
+
+Small Interface:
+13–14px
+
+Line Height:
+1.5–1.7
+
+============================================================
+45. DESIGN LANGUAGE
+============================================================
+
+Think:
+Dark Institutional Fintech
++
+Modern Crypto Infrastructure
++
+Minimal SaaS
+
+Avoid:
+- Gold coins
+- Rockets
+- Lamborghinis
+- Fake countdowns
+- Fake withdrawal notifications
+- Fake user activity
+- Extreme neon
+- Ridiculous ROI banners
+
+UPCAPITAL needs to look like someone could trust it with money.
+
+============================================================
+46. GLASSMORPHISM
+============================================================
+
+Use lightly.
+
+Suggested:
+background: rgba(255,255,255,.04);
+border: 1px solid rgba(255,255,255,.08);
+backdrop-filter: blur(14px);
+
+Do not apply glass styling to every element.
+
+============================================================
+47. BORDER RADIUS SYSTEM
+============================================================
+
+Small controls: 8px
+Inputs: 10px
+Cards: 16px
+Large sections: 24px
+Pills: 999px
+
+============================================================
+48. SHADOW SYSTEM
+============================================================
+
+Keep shadows extremely subtle.
+
+Financial applications should feel stable rather than floating everywhere.
+
+============================================================
+49. ANIMATION LANGUAGE
+============================================================
+
+Use Framer Motion.
+
+Default:
+duration: 0.35–0.6
+ease: [0.16, 1, 0.3, 1]
+
+Scroll entrance:
+opacity: 0 → 1
+y: 20 → 0
+
+Card hover:
+y: -3
+
+Buttons:
+scale 1 → 1.02
+
+Button press:
+scale 0.98
+
+Respect prefers-reduced-motion.
+
+============================================================
+50. SKELETON LOADING
+============================================================
+
+Use skeletons for:
+- Portfolio cards
+- Charts
+- Transactions
+- Notifications
+- Investment tables
+
+Dashboard should never jump around.
+
+============================================================
+51. EMPTY STATES
+============================================================
+
+Example:
+
+No transactions yet.
+
+Your account transactions will appear here once
+you make your first deposit.
+
+Make Deposit
+
+============================================================
+52. ERROR STATES
+============================================================
+
+Do not simply show:
+Error
+
+Instead:
+We couldn't load your portfolio.
+
+Your data hasn't been changed.
+
+Try Again
+
+============================================================
+53. TOAST NOTIFICATIONS
+============================================================
+
+Use:
+- Success
+- Error
+- Warning
+- Information
+
+Example:
+Withdrawal request submitted successfully.
+
+============================================================
+54. MODALS
+============================================================
+
+Use confirmation modals for dangerous or financial actions.
+
+Example:
+Confirm Withdrawal
+
+You're requesting a withdrawal of $2,500.
+
+Cancel
+Confirm
+
+============================================================
+55. ACCESSIBILITY
+============================================================
+
+Minimum target:
+WCAG AA
+
+Include:
+- Keyboard navigation
+- Focus indicators
+- ARIA labels
+- Semantic HTML
+- Sufficient contrast
+- Reduced motion support
+- Screen-reader-friendly forms
+
+============================================================
+56. RESPONSIVE BREAKPOINTS
+============================================================
+
+Mobile:
+320–639
+
+Tablet:
+640–1023
+
+Desktop:
+1024–1439
+
+Wide:
+1440+
+
+Test especially:
+- 375px
+- 390px
+- 768px
+- 1024px
+- 1280px
+- 1440px
+- 1920px
+
+============================================================
+57. SECURITY
+============================================================
+
+Use:
+- HTTP-only secure cookies
+- CSRF protection where necessary
+- Rate limiting
+- RLS
+- 2FA
+- Password hashing via auth provider
+- Input validation
+- Server-side authorization
+- Audit logs
+- Session expiry
+- Login alerts
+- Secure headers
+- Content Security Policy
+
+Never store passwords yourself.
+
+============================================================
+58. SEO
+============================================================
+
+Public pages need:
+- Metadata
+- OpenGraph
+- Twitter cards
+- Canonical URLs
+- robots.txt
+- sitemap.xml
+- JSON-LD
+- Semantic headings
+
+Dashboard/admin/auth pages should generally not be indexed.
+
+============================================================
+59. PERFORMANCE
+============================================================
+
+Target Lighthouse:
+Performance 90+
+Accessibility 95+
+Best Practices 95+
+SEO 95+
+
+Use:
+- Image optimization
+- Lazy loading
+- Code splitting
+- Server Components
+- Caching
+- Font optimization
+
+============================================================
+60. DEVELOPMENT PHASES
+============================================================
+
+Phase 0:
+Requirements + architecture
+
+Phase 1:
+Project setup
+
+Phase 2:
+Design system
+
+Phase 3:
+Public homepage
+
+Phase 4:
+Remaining public pages
+
+Phase 5:
+Authentication
+
+Phase 6:
+Dashboard layout
+
+Phase 7:
+Portfolio/investment features
+
+Phase 8:
+Deposits/withdrawals
+
+Phase 9:
+KYC
+
+Phase 10:
+Security center
+
+Phase 11:
+Support/notifications
+
+Phase 12:
+Admin system
+
+Phase 13:
+Backend/data integration
+
+Phase 14:
+Security hardening
+
+Phase 15:
+QA
+
+Phase 16:
+Production deployment
+
+Do not ask an AI to build all phases in one response.
+
+Give it the master specification once, then execute one stage at a time.
+
+============================================================
+MASTER UPCAPITAL DEVELOPMENT PROMPT
+============================================================
+
+UPCAPITAL — MASTER PRODUCT & DEVELOPMENT SPECIFICATION
+
+You are the lead product engineer, frontend engineer, backend architect, UI/UX designer and security-conscious technical advisor responsible for developing UPCAPITAL.
+
+Your responsibility is not merely to produce visually attractive code. Build UPCAPITAL as a coherent, scalable, secure, maintainable fintech-style investment platform with a premium institutional appearance.
+
+Before implementing anything, study this specification carefully and preserve its architecture, terminology, visual system and interaction patterns throughout the project.
+
+PRODUCT
+
+Product name:
+UPCAPITAL
+
+Core positioning:
+"Put your capital to work intelligently."
+
+UPCAPITAL is a technology-driven digital asset/investment platform that gives users access to portfolio tracking, strategy monitoring, performance reporting, deposits, withdrawals, account security and investment management.
+
+The application consists of three major systems:
+
+1. Public marketing website
+2. Authenticated client cabinet
+3. Protected administrative dashboard
+
+The application must never present fabricated investment activity, fake testimonials, fake withdrawals, fabricated regulatory credentials, guaranteed profits or invented performance statistics.
+
+Any performance values must either be clearly identified demo data during development or originate from actual configured data once the system is operational.
+
+Avoid misleading language such as:
+"Guaranteed returns"
+"Risk-free"
+"Guaranteed income"
+"98.9% win rate"
+
+unless the platform owner later provides independently verifiable evidence and confirms that the claim may legally be published.
+
+TECH STACK
+
+Build using:
+- Next.js latest stable App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Supabase
+- PostgreSQL
+- Framer Motion
+- Lucide React
+- Recharts
+- React Hook Form
+- Zod
+
+Use server components whenever appropriate.
+Use client components only when interactivity genuinely requires them.
+Keep business logic separate from presentation components.
+Never put database credentials or secrets in client-side code.
+Use environment variables.
+
+CODE QUALITY
+
+Code must be:
+- modular
+- typed
+- responsive
+- accessible
+- maintainable
+- documented where logic is complex
+- production-oriented
+
+Do not generate one giant page component.
+Break interfaces into reusable components.
+Avoid unnecessary dependencies.
+Do not duplicate components.
+Create appropriate utilities, services, hooks, types and constants.
+Do not hard-code content that should later come from configuration/database.
+
+PROJECT STRUCTURE
+
+Use a clean structure similar to:
+
+app/
+components/
+components/ui/
+components/navigation/
+components/dashboard/
+components/charts/
+components/forms/
+components/modals/
+lib/
+services/
+hooks/
+stores/
+types/
+utils/
+public/
+styles/
+
+Create route groups where useful.
+
+Public routes, authentication routes, dashboard routes and administrative routes should remain logically separated.
+
+VISUAL DIRECTION
+
+UPCAPITAL must feel like:
+- Institutional fintech
+- Premium financial technology
+- Modern investment dashboard
+- Minimal crypto infrastructure
+
+Do NOT make it resemble a cheap crypto investment website.
+
+Avoid:
+- excessive neon
+- gold coin imagery
+- rocket graphics
+- fake activity notifications
+- fake deposits
+- countdown gimmicks
+- flashing banners
+- extreme gradients
+- overly animated interfaces
+
+COLOR SYSTEM
+
+Main background:
+#080B14
+
+Secondary surface:
+#0D1220
+
+Elevated surface:
+#131927
+
+Primary purple:
+#7456E8
+
+Purple highlight:
+#986EF5
+
+Electric cyan:
+#18D5E5
+
+Success:
+#39D98A
+
+Warning:
+#FFB547
+
+Danger:
+#FF5C68
+
+Primary text:
+#F7F8FC
+
+Secondary text:
+#9DA7BC
+
+Muted text:
+Use an appropriate accessible slate tone.
+
+Borders:
+rgba(255,255,255,0.08)
+
+TYPOGRAPHY
+
+Primary UI font:
+Manrope
+
+Financial/data font:
+Inter
+
+Weights:
+400
+500
+600
+700
+800
+
+Use tabular numbers for financial figures.
+
+Typography must use fluid sizing.
+
+Hero title:
+clamp(3rem, 6vw, 6rem)
+
+Section heading:
+clamp(2rem, 4vw, 3.5rem)
+
+Body:
+16–18px
+
+Small UI labels:
+13–14px
+
+SPACING
+
+Use a consistent spacing scale.
+Do not randomly choose margins.
+Use generous whitespace on marketing pages.
+Dashboard spacing should be tighter but remain breathable.
+
+Maximum public content width:
+approximately 1200–1320px.
+
+BORDER RADIUS
+
+Inputs:
+10px
+
+Small components:
+8px
+
+Cards:
+16px
+
+Large feature areas:
+24px
+
+Pills:
+999px
+
+GLASS STYLE
+
+Glass effects may be used selectively.
+
+Suggested:
+background: rgba(255,255,255,0.04)
+border: 1px solid rgba(255,255,255,0.08)
+backdrop-filter: blur(14px)
+
+Do not apply glass styling to every element.
+
+MOTION SYSTEM
+
+Use Framer Motion.
+
+Animation duration:
+0.35–0.6 seconds generally.
+
+Preferred easing:
+[0.16, 1, 0.3, 1]
+
+Entrance:
+opacity 0 → 1
+translateY 20px → 0
+
+Card hover:
+translateY 0 → -3px
+
+Button hover:
+scale 1 → 1.02
+
+Button press:
+scale 1 → 0.98
+
+Avoid excessive motion.
+Respect prefers-reduced-motion.
+
+PUBLIC WEBSITE
+
+Create the following pages:
+/
+/about
+/how-it-works
+/performance
+/technology
+/security
+/faq
+/contact
+/legal/terms
+/legal/privacy
+/legal/risk
+/legal/aml
+/legal/cookies
+
+NAVIGATION
+
+Desktop navigation:
+UPCAPITAL logo
+Home
+About
+How It Works
+Performance
+Security
+FAQ
+Sign In
+Get Started
+
+Navigation begins transparent over the hero.
+
+After approximately 50px scroll:
+- Apply a dark translucent background
+- Increase backdrop blur
+- Add subtle border
+- Slightly reduce header height
+- Transition smoothly
+
+On mobile:
+- Use an accessible slide-out menu
+- Trap keyboard focus while menu is open
+- Allow ESC to close
+- Prevent background scrolling
+
+HOMEPAGE
+
+Homepage sections must follow this sequence:
+- Navigation
+- Hero
+- Trust strip
+- Platform overview
+- How it works
+- Technology
+- Performance
+- Risk management
+- Security
+- Projection calculator
+- Testimonials
+- FAQ
+- Final CTA
+- Footer
+
+HERO
+
+Eyebrow:
+AI-ASSISTED DIGITAL ASSET STRATEGIES
+
+Headline:
+Put your capital
+to work intelligently.
+
+Supporting copy:
+UPCAPITAL provides technology-driven access to digital-asset strategies with portfolio monitoring, transparent performance reporting and built-in risk controls.
+
+Primary CTA:
+Create Account
+
+Secondary CTA:
+Explore Platform
+
+Below CTA display:
+- Secure Infrastructure
+- Transparent Reporting
+- 24/7 Portfolio Monitoring
+
+Right side:
+Create an elegant dashboard visualization containing:
+- Portfolio Balance
+- percentage performance
+- animated area/line chart
+- three sample assets
+- small allocation indicators
+
+This visualization is a UI demonstration only until connected to genuine user data.
+
+Hero entrance sequence:
+- navigation fades down
+- eyebrow rises/fades
+- headline rises
+- paragraph rises
+- buttons rise
+- dashboard visual slides/scales into position
+- chart animates last
+
+Animations should finish approximately within 1.5 seconds.
+
+TRUST STRIP
+
+Headline:
+BUILT FOR TRANSPARENCY
+
+Items:
+- Portfolio Tracking
+- Risk Monitoring
+- Secure Access
+- Performance Analytics
+- 24/7 Infrastructure
+
+Create a subtle horizontal motion effect if appropriate.
+
+PLATFORM OVERVIEW
+
+Headline:
+Everything you need to understand your capital.
+
+Cards:
+- Portfolio Intelligence
+- Strategy Monitoring
+- Risk Management
+- Transparent Reporting
+
+Cards should have subtle border, icon, heading, description and hover movement.
+
+HOW IT WORKS
+
+Use four steps:
+01 Create Your Account
+02 Verify Your Identity
+03 Fund Your Account
+04 Monitor Your Portfolio
+
+Desktop:
+horizontal process
+
+Mobile:
+vertical process
+
+Animate connecting path as it becomes visible.
+
+TECHNOLOGY
+
+Headline:
+Technology working behind the strategy.
+
+Topics:
+- Market Data Processing
+- Portfolio Analysis
+- Risk Algorithms
+- Trade Monitoring
+- Reporting Infrastructure
+
+Create a sophisticated abstract data visualization.
+Do not make unsupported accuracy claims.
+
+PERFORMANCE
+
+Create a professional investment-performance module.
+
+Controls:
+1M
+3M
+6M
+1Y
+ALL
+
+Display:
+- performance chart
+- historical return
+- monthly performance
+- drawdown
+- performance table
+
+Always display:
+Past performance does not guarantee future results.
+
+The production version must obtain numbers from real configured data.
+
+RISK MANAGEMENT
+
+Explain:
+- Capital Allocation
+- Position Limits
+- Drawdown Monitoring
+- Portfolio Diversification
+- Exposure Controls
+
+Create a shield/risk visualization.
+
+This section must emphasize that digital assets involve potential capital loss.
+
+SECURITY
+
+Show:
+- Encrypted Data
+- Secure Authentication
+- Two-Factor Authentication
+- Session Management
+- Withdrawal Verification
+- Activity Monitoring
+
+Use security-oriented visual elements rather than generic stock photography.
+
+PROJECTION CALCULATOR
+
+Create inputs for:
+- Investment Amount
+- Scenario
+- Investment Period
+
+Scenarios:
+- Conservative
+- Moderate
+- Aggressive
+
+Periods:
+- 3 months
+- 6 months
+- 12 months
+
+Return an illustrative scenario.
+
+Never describe the result as guaranteed.
+
+Clearly display:
+Illustrative projection only. Actual investment performance may differ and capital is at risk.
+
+TESTIMONIALS
+
+Only support authentic testimonials.
+During development use clearly labelled placeholder content.
+Use horizontal carousel.
+
+Display:
+- avatar
+- name
+- country/role if appropriate
+- testimonial
+
+Do not create fake profits or withdrawal screenshots.
+
+FAQ
+
+Create accessible accordion questions around:
+- What is UPCAPITAL?
+- How does the strategy work?
+- What digital assets may be used?
+- Are returns guaranteed?
+- How are funds managed?
+- How does withdrawal work?
+- What fees apply?
+- How is risk managed?
+- How is my account secured?
+- How do I contact support?
+
+FINAL CTA
+
+Headline:
+Make your capital work smarter.
+
+Copy:
+Create your UPCAPITAL account and gain access to technology-driven portfolio management and transparent reporting.
+
+CTA:
+Create Account
+
+Use subtle animated gradient background.
+
+FOOTER
+
+Columns:
+- Platform
+- Company
+- Resources
+- Legal
+
+Provide:
+- How It Works
+- Performance
+- Technology
+- Security
+- About
+- Contact
+- FAQ
+- Help Center
+- Terms
+- Privacy
+- Risk Disclosure
+- AML Policy
+- Cookie Policy
+
+Bottom text:
+© current year UPCAPITAL.
+Digital assets involve risk. Capital may be lost.
+
+AUTHENTICATION
+
+Routes:
+/auth/login
+/auth/register
+/auth/verify-email
+/auth/forgot-password
+/auth/reset-password
+/auth/2fa
+
+Use Supabase Auth.
+
+REGISTRATION
+
+Create a multi-step experience.
+
+Step 1:
+- First Name
+- Last Name
+- Email
+- Password
+- Confirm Password
+
+Step 2:
+- Country
+- Phone
+
+Step 3:
+- Terms acknowledgement
+- Privacy acknowledgement
+- Risk disclosure acknowledgement
+
+Then email verification.
+
+Validate with Zod.
+Display password-strength feedback.
+
+LOGIN
+
+Create premium split-screen layout.
+
+Fields:
+- Email
+- Password
+- Remember device
+- Forgot Password
+- Sign In
+- Create Account link
+
+After login:
+If 2FA is active, route through verification.
+Otherwise redirect to dashboard.
+
+CLIENT CABINET
+
+All authenticated routes live under:
+/dashboard
+
+Dashboard navigation:
+- Overview
+- Portfolio
+- Investments
+- Deposit
+- Withdraw
+- Transactions
+- Performance
+- Referrals
+- Notifications
+- Support
+- Verification
+- Profile
+- Security
+- Settings
+- Logout
+
+DASHBOARD OVERVIEW
+
+Header:
+Good morning, {firstName}.
+Here's an overview of your portfolio.
+
+Summary cards:
+- Portfolio Value
+- Invested Capital
+- Total Return
+- Available Balance
+
+Main graph:
+Portfolio Performance
+
+Filters:
+1D
+7D
+1M
+3M
+1Y
+ALL
+
+Additional modules:
+- Active Investments
+- Recent Transactions
+- Portfolio Allocation
+- Account Status
+
+Use loading skeletons while data loads.
+
+PORTFOLIO
+
+Display:
+- Total portfolio value
+- Allocation donut chart
+- Asset table
+- Profit/loss
+- Allocation percentages
+- Asset details
+
+Each asset entry includes:
+- symbol
+- name
+- allocation
+- value
+- profit/loss
+- percentage change
+
+INVESTMENTS
+
+Display available strategies.
+
+Each strategy must contain:
+- Name
+- Description
+- Risk Level
+- Minimum Capital
+- Suggested Investment Horizon
+- Fee Information
+- Withdrawal Terms
+- Historical performance if genuine data exists
+- CTA
+
+Never describe performance as guaranteed.
+
+DEPOSIT
+
+Create a guided deposit wizard.
+
+Step 1:
+Choose deposit method.
+
+Step 2:
+Choose asset/currency.
+
+Step 3:
+Enter amount.
+
+Step 4:
+Provide payment details.
+
+Step 5:
+Confirmation.
+
+For cryptocurrency:
+Display:
+- Asset
+- Network
+- Deposit address
+- QR code
+- Minimum deposit
+- Network warning
+- Copy button
+
+Do not treat deposits as confirmed until backend confirmation occurs.
+
+States:
+- Awaiting Payment
+- Pending Confirmation
+- Completed
+- Failed
+
+WITHDRAWAL
+
+Display:
+- Available Balance
+- Amount
+- Asset/currency
+- Destination details
+- Fees if any
+- Expected processing information
+- 2FA confirmation
+- Submit Withdrawal
+
+Statuses:
+- Pending
+- Approved
+- Processing
+- Completed
+- Rejected
+
+Create proper confirmation modal.
+
+Sensitive withdrawal operations must happen server-side.
+
+TRANSACTIONS
+
+Create filterable and paginated table.
+
+Columns:
+- Date
+- Type
+- Amount
+- Currency
+- Method
+- Status
+- Reference
+
+Filters:
+- Deposit
+- Withdrawal
+- Investment
+- Return
+- Fee
+- Status
+- Date range
+
+Future option:
+Export CSV/PDF.
+
+PERFORMANCE
+
+Metrics:
+- Net Return
+- Average Monthly Return
+- Maximum Drawdown
+- Current Drawdown
+
+Charts:
+- Portfolio Value
+- Cumulative Return
+- Monthly Return
+- Drawdown
+
+Allow date filtering.
+
+KYC / VERIFICATION
+
+Statuses:
+- Unverified
+- Pending
+- Verified
+- Rejected
+
+Steps:
+- Personal Details
+- Identity Document
+- Address Verification
+- Review
+
+Do not expose sensitive document URLs publicly.
+Restrict access through backend policies.
+
+PROFILE
+
+Allow users to view/edit appropriate fields.
+
+Fields:
+- First Name
+- Last Name
+- Phone
+- Email
+- Country
+- Address
+- Date of Birth
+
+Some verified identity fields may become read-only after KYC approval.
+
+SECURITY CENTER
+
+Features:
+- Change Password
+- Two-Factor Authentication
+- Active Sessions
+- Login History
+- Known Devices
+- Security Notifications
+- Withdrawal Verification
+- Sign Out All Devices
+
+Display security events clearly.
+
+NOTIFICATIONS
+
+Types:
+- Deposit received
+- Withdrawal requested
+- Withdrawal completed
+- Login detected
+- Profile updated
+- Verification result
+- Investment update
+- System announcement
+
+Support unread/read states.
+
+SUPPORT
+
+Create ticket system.
+
+New ticket fields:
+- Category
+- Subject
+- Message
+- Attachment
+
+Statuses:
+- Open
+- Waiting
+- Resolved
+- Closed
+
+Allow conversation thread between support and user.
+
+REFERRAL SYSTEM
+
+If enabled:
+- Referral URL
+- Referral code
+- Total referrals
+- Active referrals
+- Referral earnings
+- Referral transaction history
+
+Do not implement pyramid or misleading recruitment mechanics.
+
+ADMIN PANEL
+
+Route:
+/admin
+
+Admin authentication must be independent and strongly protected.
+
+Admin dashboard:
+- Total Users
+- Verified Users
+- Total Deposits
+- Total Withdrawals
+- Assets Under Management
+- Pending Withdrawals
+- Pending Verification
+- Open Support Tickets
+- Recent Activities
+
+Charts for platform activity.
+
+USER MANAGEMENT
+
+Admin can:
+- search users
+- filter users
+- open user profile
+- view KYC status
+- view account status
+- view transaction history
+- suspend account
+- restore account
+- review security information
+
+All sensitive admin actions must create audit records.
+
+KYC MANAGEMENT
+
+Admin can:
+- View pending reviews
+- Open submitted documents securely
+- Approve
+- Reject
+- Request additional information
+- Store reviewer details and timestamps
+
+DEPOSIT MANAGEMENT
+
+Admin can:
+- Review applicable pending deposits
+- Search deposits
+- Filter by status
+- Reconcile deposit information where manual reconciliation is part of the business process
+- View transaction reference
+- View user
+- View timestamp
+- Record admin action
+
+WITHDRAWAL MANAGEMENT
+
+Admin can:
+- review withdrawal
+- approve
+- reject
+- mark processing
+- mark completed
+- add internal notes
+
+Require strong authorization for sensitive actions.
+Record every status change.
+
+STRATEGY MANAGEMENT
+
+Admin can:
+- Create strategy
+- Edit strategy
+- Deactivate strategy
+
+Configure:
+- risk level
+- minimum capital
+- description
+- fees
+- investment horizon
+- real performance information
+
+PERFORMANCE MANAGEMENT
+
+Provide admin interface for entering/importing genuine performance records.
+
+Frontend performance charts must use this dataset.
+
+Never generate fictional performance as production data.
+
+CONTENT MANAGEMENT
+
+Admin can manage:
+- FAQ
+- Announcements
+- Homepage metrics
+- Platform notices
+- Investment content
+- Support information
+- Maintenance notices
+
+DATABASE
+
+Create appropriately normalized database schema including:
+- profiles
+- user_settings
+- kyc_verifications
+- accounts
+- portfolios
+- portfolio_assets
+- investment_strategies
+- user_investments
+- deposits
+- withdrawals
+- transactions
+- performance_records
+- notifications
+- support_tickets
+- support_messages
+- referrals
+- security_events
+- admin_users
+- audit_logs
+
+Create appropriate foreign keys.
+Create timestamps.
+Create indexes.
+Implement Row Level Security.
+Users must only access their own private data.
+Admin authorization must never depend only on UI visibility.
+
+LOADING STATES
+
+Every asynchronous screen must include proper loading UI.
+
+Use skeletons for:
+- dashboard metrics
+- charts
+- transactions
+- investments
+- notifications
+- portfolio cards
+
+Never leave blank screens while loading.
+
+EMPTY STATES
+
+Create meaningful empty states.
+
+Example:
+No transactions yet.
+
+Your transactions will appear here after your first deposit.
+
+CTA:
+Make Deposit
+
+ERROR STATES
+
+Errors should explain what happened without exposing server internals.
+
+Example:
+We couldn't load your portfolio.
+
+Your account data has not been changed.
+
+Button:
+Try Again
+
+TOAST SYSTEM
+
+Implement notifications for:
+- Success
+- Error
+- Warning
+- Information
+
+Examples:
+- Deposit request created.
+- Withdrawal request submitted.
+- Profile saved.
+- Verification submitted.
+- Something went wrong.
+
+MODALS
+
+Use accessible confirmation modals for destructive and financial actions.
+
+Examples:
+- Confirm Withdrawal
+- Confirm Logout All Sessions
+- Delete Attachment
+- Cancel Ticket
+
+Trap focus and support keyboard navigation.
+
+RESPONSIVE DESIGN
+
+Mobile first.
+
+Important widths:
+- 320
+- 375
+- 390
+- 430
+- 768
+- 1024
+- 1280
+- 1440
+- 1920
+
+Do not simply shrink desktop UI.
+
+Dashboard should use collapsible navigation on tablet/mobile.
+
+Tables should become cards or horizontally scroll where appropriate.
+
+ACCESSIBILITY
+
+Target WCAG AA.
+
+Implement:
+- semantic HTML
+- keyboard navigation
+- visible focus states
+- ARIA where appropriate
+- accessible labels
+- sufficient color contrast
+- reduced-motion support
+- accessible forms
+- meaningful errors
+- screen-reader announcements for important actions
+
+SECURITY
+
+Implement:
+- Supabase secure authentication
+- HTTP-only/server-managed session practices where appropriate
+- input validation
+- Zod schemas
+- server-side authorization
+- rate limiting on sensitive endpoints
+- 2FA
+- secure password flow
+- RLS
+- secure headers
+- Content Security Policy
+- session expiration
+- audit logs
+- login monitoring
+
+Do not trust client input.
+Do not expose admin permissions to frontend logic alone.
+Never expose secret keys.
+
+SEO
+
+For public pages implement:
+- page metadata
+- OpenGraph
+- social preview
+- canonical URLs
+- robots.txt
+- sitemap.xml
+- schema/structured data where appropriate
+- semantic headings
+
+Auth/dashboard/admin pages must not be indexed.
+
+PERFORMANCE
+
+Target:
+Lighthouse Performance 90+
+Accessibility 95+
+Best Practices 95+
+SEO 95+
+
+Use:
+- image optimization
+- font optimization
+- lazy loading
+- route-level code splitting
+- server components
+- proper caching
+- minimal client JavaScript
+
+DEVELOPMENT WORKFLOW
+
+Do not attempt to build the entire platform at once.
+
+Complete one phase at a time.
+
+For every phase:
+1. Inspect the existing project.
+2. Explain what will be implemented.
+3. Identify dependencies.
+4. Implement the feature.
+5. Verify TypeScript.
+6. Verify responsive behaviour.
+7. Verify accessibility.
+8. Check console errors.
+9. Ensure existing functionality remains intact.
+10. Summarize the files created/modified.
+
+Do not rewrite unrelated files without reason.
+Do not remove functioning features without explaining why.
+If architecture needs changing, explain before making major changes.
+
+PHASE ORDER
+
+PHASE 0
+Audit and architecture.
+
+PHASE 1
+Next.js project foundation.
+
+PHASE 2
+Design system and reusable components.
+
+PHASE 3
+Homepage.
+
+PHASE 4
+Remaining public pages.
+
+PHASE 5
+Authentication.
+
+PHASE 6
+Dashboard foundation.
+
+PHASE 7
+Portfolio and investments.
+
+PHASE 8
+Deposits and withdrawals.
+
+PHASE 9
+Transactions and performance.
+
+PHASE 10
+KYC and profile.
+
+PHASE 11
+Security and notifications.
+
+PHASE 12
+Support and referrals.
+
+PHASE 13
+Admin dashboard.
+
+PHASE 14
+Database/backend integration.
+
+PHASE 15
+Security hardening.
+
+PHASE 16
+Testing, accessibility and QA.
+
+PHASE 17
+Production deployment.
+
+Work strictly according to these phases unless explicitly instructed otherwise.
+
+When a phase is complete, do not automatically start the next major phase.
+
+Report what was completed and wait for the next development instruction.
+
+============================================================
+PHASE-BY-PHASE WORK PROMPTS
+============================================================
+
+STAGE 0 — AUDIT
+Study the UPCAPITAL master specification and inspect the current uploaded HTML/codebase. Do not rebuild anything yet. Produce an architecture audit showing what can be retained, what should be replaced, technical debt, missing functionality and the exact migration plan to the target Next.js architecture.
+
+STAGE 1 — SETUP
+Begin UPCAPITAL Phase 1. Create the production Next.js + TypeScript + Tailwind foundation. Establish routing, project structure, fonts, global theme variables, linting, formatting and environment configuration. Do not build the homepage yet.
+
+STAGE 2 — UI SYSTEM
+Begin UPCAPITAL Phase 2. Build the complete reusable design system: Button, Input, Select, Card, Badge, Modal, Drawer, Tooltip, Dropdown, Tabs, Accordion, Toast, Skeleton, DataTable shell, page container and typography components. Follow the exact UPCAPITAL theme specification.
+
+STAGE 3 — HOMEPAGE
+Begin UPCAPITAL Phase 3. Build the full homepage according to the master specification. Focus heavily on typography, spacing, visual hierarchy, premium fintech aesthetics, responsive design and subtle Framer Motion interactions. Do not implement backend logic yet.
+
+STAGE 4 — PUBLIC SITE
+Begin UPCAPITAL Phase 4. Build About, How It Works, Performance, Technology, Security, FAQ, Contact and legal-page templates. Reuse the design system and maintain exact visual consistency with the homepage.
+
+STAGE 5 — AUTH
+Begin UPCAPITAL Phase 5. Implement Supabase authentication including registration, login, email verification, forgot/reset password, protected routes, auth middleware and the UI specified in the master brief.
+
+STAGE 6 — DASHBOARD
+Begin UPCAPITAL Phase 6. Build the authenticated Client Cabinet shell and Overview dashboard. Use safe development/demo data only. Create sidebar, topbar, metric cards, performance graph, portfolio allocation, recent transactions and responsive mobile navigation.
+
+STAGE 7 — PORTFOLIO
+Begin UPCAPITAL Phase 7. Build Portfolio and Investments, including asset allocations, strategy cards, portfolio analytics, filtering, chart interactions, loading states, empty states and error states.
+
+STAGE 8 — MONEY FLOWS
+Begin UPCAPITAL Phase 8. Build Deposit and Withdrawal workflows. Treat these as security-sensitive financial operations. Implement UI, validation, states, confirmation dialogs and backend interfaces without fabricating successful transactions.
+
+STAGE 9 — TRANSACTIONS
+Begin UPCAPITAL Phase 9. Build Transactions and Performance. Add pagination, filtering, date ranges, transaction details, performance charts, drawdown information and real-data-ready APIs.
+
+STAGE 10 — IDENTITY
+Begin UPCAPITAL Phase 10. Build Profile and KYC verification architecture, including document submission, verification statuses and secure document-access patterns.
+
+STAGE 11 — SECURITY
+Begin UPCAPITAL Phase 11. Build Security Center, 2FA architecture, sessions, login history, trusted devices, password management, security alerts and audit-ready events.
+
+STAGE 12 — ENGAGEMENT
+Begin UPCAPITAL Phase 12. Build Notifications, Support Tickets and the optional Referral module according to the master specification.
+
+STAGE 13 — ADMIN
+Begin UPCAPITAL Phase 13. Build the protected administrative platform for users, KYC, deposits, withdrawals, investment strategies, performance data, content, support and audit logs.
+
+STAGE 14 — DATABASE
+Begin UPCAPITAL Phase 14. Finalize Supabase/PostgreSQL database architecture. Produce migrations, foreign keys, indexes, RLS policies, roles, transaction integrity constraints and strongly typed application interfaces.
+
+STAGE 15 — SECURITY HARDENING
+Perform UPCAPITAL Phase 15. Conduct a security-hardening review. Audit authorization, RLS, input validation, authentication, admin privileges, financial actions, session handling, rate limiting, logging, security headers and secrets.
+
+STAGE 16 — QA
+Perform UPCAPITAL Phase 16. Conduct a complete QA pass across desktop, tablet and mobile. Fix responsiveness, accessibility, loading states, error states, broken routes, TypeScript errors, console errors, animation issues and inconsistent UI.
+
+STAGE 17 — PRODUCTION
+Perform UPCAPITAL Phase 17. Prepare the application for production deployment. Configure environment variables, database migrations, build verification, analytics hooks, SEO, sitemap, robots, error monitoring and production-readiness documentation.
+
+============================================================
+RECOMMENDED PERSONAL WORKFLOW
+============================================================
+
+You
+↓
+Product / visual decisions
+
+ChatGPT
+↓
+Architecture + UX + problem solving
+
+Codex / Claude
+↓
+Implementation
+
+You
+↓
+Run locally in VS Code
+
+Browser
+↓
+Test
+
+GitHub
+↓
+Commit
+
+Next phase
+
+This workflow helps you stay in control of the project and understand the code instead of ending up with a huge AI-generated codebase you cannot maintain.
+
+The first thing to give Codex is:
+PHASE 0 — THE AUDIT.
+
+Use your existing upcapital.html as the source.
+
+Do NOT ask Codex to start rebuilding immediately.
+
+Have it first:
+- inspect the existing project
+- identify reusable parts
+- identify broken or obsolete parts
+- propose the migration architecture
+- map the old project to the new Next.js structure
+- list dependencies
+- list risks
+- list development priorities
+
+Then move to Phase 1.
+
+============================================================
+END OF UPCAPITAL DEVELOPMENT BLUEPRINT
+============================================================

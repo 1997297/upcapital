@@ -1,0 +1,69 @@
+UPCAPITAL — PHASE 3 REWORKED HOMEPAGE
+
+This replaces the earlier Phase 3 homepage update.
+
+INSTALL INTO YOUR EXISTING PHASE 2 PROJECT
+
+1. Extract this ZIP.
+2. Copy the included folders/files into your existing upcapital-platform folder.
+3. Allow Windows to replace/merge files.
+
+FILES INCLUDED
+- app/page.tsx
+- app/phase3-marketing.css
+- components/marketing/home-page.tsx
+- components/marketing/marketing-navbar.tsx
+- public/brand/*
+- public/placeholders/*
+
+IMPORTANT CSS STEP
+Open app/globals.css.
+
+If it DOES NOT already contain:
+@import "./phase3-marketing.css";
+
+add it near the top with your other imports.
+
+If you added this during the previous Phase 3 installation, do not add it twice.
+
+RUN
+npm run dev
+
+OPEN
+http://localhost:3000
+
+ALSO VERIFY
+http://localhost:3000/design-system
+
+PLACEHOLDER RULE
+The project owner has specified that all current business facts are development placeholders.
+This build therefore includes invented development-only:
+- annual performance data
+- assets monitored
+- client count
+- strategy allocation percentages
+- testimonials
+- headquarters address
+- phone/email
+- illustrative portfolio figures
+- scenario assumptions
+
+These are intentionally easy to replace with final production information later.
+
+PERFORMANCE VALUES
+2020: 61.20%
+2021: 72.40%
+2022: 64.80%
+2023: 69.30%
+2024: 74.60%
+2025: 64.74%
+Arithmetic average: 67.84%
+
+HQ PLACEHOLDER
+48 Hudson Crest Parkway
+Tarrytown, New York 10591
+United States
+
+CONTACT PLACEHOLDERS
+hello@upcapital.com
++1 (914) 555-0186
