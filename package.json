@@ -2,6 +2,9 @@
   "name": "upcapital-platform",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "test:auth": "node --experimental-strip-types --test --test-isolation=none tests/auth-validation.test.mjs",
     "test:auth:routes": "node --test --test-isolation=none tests/auth-routes.test.mjs",
+    "test:dashboard": "node --experimental-strip-types --test --test-isolation=none tests/dashboard-data.test.mjs tests/client-preferences.test.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

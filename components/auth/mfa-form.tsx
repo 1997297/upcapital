@@ -6,7 +6,13 @@ import { createClient } from "@/lib/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export function MfaForm({ factors }: { factors: { id: string; name: string }[] }) {
+export function MfaForm({
+  factors,
+  destination,
+}: {
+  factors: { id: string; name: string }[];
+  destination: "/dashboard" | "/auth/account" | "/auth/reset-password";
+}) {
   const router = useRouter();
   const [factorId, setFactorId] = useState(factors[0]?.id || "");
   const [setup, setSetup] = useState<{ qr: string; secret: string } | null>(null);
@@ -61,7 +67,7 @@ export function MfaForm({ factors }: { factors: { id: string; name: string }[] }
         return;
       }
       setSetup(null);
-      router.replace("/auth/account");
+      router.replace(destination);
       router.refresh();
     } catch {
       setError("Verification is temporarily unavailable. Please try again.");

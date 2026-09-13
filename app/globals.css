@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./phase3-marketing.css";
+@import "./client-area.css";
 
 :root {
   --background: #080b14;

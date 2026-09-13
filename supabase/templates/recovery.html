@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reset your UPCapital password</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      background: #080b14;
+      color: #f7f8fc;
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <div style="display: none; max-height: 0; overflow: hidden">
+      Use your secure link to choose a new UPCapital password.
+    </div>
+    <table role="presentation" style="width: 100%; border-collapse: collapse; background: #080b14">
+      <tr>
+        <td align="center" style="padding: 40px 16px">
+          <table
+            role="presentation"
+            style="width: 100%; max-width: 560px; border-collapse: collapse"
+          >
+            <tr>
+              <td style="padding: 0 0 28px; font-size: 22px; font-weight: 700; color: #b8ff00">
+                UPCapital
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 32px 24px;
+                  background: #131927;
+                  border: 1px solid #293142;
+                  border-radius: 16px;
+                "
+              >
+                <h1 style="margin: 0 0 20px; font-size: 28px; line-height: 36px; color: #f7f8fc">
+                  Reset your password.
+                </h1>
+                <p style="margin: 0 0 24px; font-size: 16px; line-height: 26px; color: #c4ccda">
+                  We received a request to change your UPCapital password. Use the link below to
+                  choose a new one.
+                </p>
+                <table role="presentation" style="border-collapse: collapse">
+                  <tr>
+                    <td style="border-radius: 8px; background: #b8ff00; text-align: center">
+                      <a
+                        href="{{ .ConfirmationURL }}"
+                        style="
+                          display: inline-block;
+                          padding: 15px 24px;
+                          color: #080b14;
+                          font-size: 15px;
+                          font-weight: 700;
+                          text-decoration: none;
+                        "
+                        >Choose a new password</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin: 24px 0 0; font-size: 14px; line-height: 23px; color: #c4ccda">
+                  Open this link in the browser where you requested the reset. If two-factor
+                  authentication is enabled, you will also need your authenticator code.
+                </p>
+                <p style="margin: 20px 0 0; font-size: 14px; line-height: 23px; color: #c4ccda">
+                  If you did not request this change, ignore this email. Your password will remain
+                  unchanged.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 24px; font-size: 12px; line-height: 20px; color: #9da7bc">
+                UPCapital account security<br />Never share this link or your authenticator codes.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

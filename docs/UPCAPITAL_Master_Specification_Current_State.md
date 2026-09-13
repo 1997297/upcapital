@@ -1,8 +1,12 @@
 # UPCAPITAL — MASTER SPECIFICATION, CURRENT PROJECT STATE & CODEX HANDOFF
 
+> **Client-area additions — September 13, 2026:** Phase 6 now includes client light/dark themes, a versioned login risk disclosure and settings screen, a simpler dashboard hierarchy, and provider-neutral contracts for later investment/funding phases. See `docs/CLIENT_AREA_ADDITIONS.md` for the adopted requirements and phase allocation. These additions supersede conflicting older client-area details without replacing the roadmap. Phase 7 remains next; SMTP/domain work remains deferred.
+
 > **Implementation update — September 12, 2026:** Phase 4 public pages are now implemented. The homepage has shared glass navigation, a shared footer, cleaned public copy and interactive performance periods. Existing business details were retained at the owner's express request; public development labels were removed. Phase 5 authentication is next. See `docs/PHASE_4_PUBLIC_WEBSITE.md` for the current implementation, file inventory, verification and remaining boundaries. Phase-status statements below describe the earlier handoff snapshot; product direction remains applicable unless superseded by the owner's instructions.
 
 > **Phase 5 update — September 12, 2026:** Authentication routes, server actions, protected account access and TOTP integration are implemented and connected to the owner's new UPCAPITAL Supabase project. Email-provider configuration and successful end-to-end signup/recovery/MFA verification remain pending. Phase 6 has not started. This update supersedes the earlier phase status above. See `docs/PHASE_5_AUTHENTICATION.md` for configuration, verification and remaining work.
+
+> **Current owner direction / Phase 6:** Defer custom SMTP, Resend activation and domain setup until production preparation. These do not block continued development. Keep Supabase authentication and the prepared Resend architecture in place. Phase 6 dashboard foundation is now implemented; see `docs/PHASE_6_DASHBOARD_FOUNDATION.md`. The next development phase is Phase 7, Portfolio + Investments. This direction supersedes the earlier email-setup dependency and phase status above.
 
 **Purpose:** This is the current source-of-truth document for the UPCAPITAL platform. It combines the full product blueprint, current design language, development status, placeholder rules, brand guidance, architecture, roadmap, and explicit instructions for Codex working inside the existing codebase.
 
@@ -1857,14 +1861,15 @@ Remaining Public Pages
 
 ## Phase 5
 Authentication
-**IMPLEMENTED / EMAIL CONFIGURATION AND LIVE FLOW VERIFICATION PENDING**
+**IMPLEMENTED / CUSTOM SMTP AND EMAIL VERIFICATION TESTING DEFERRED TO PRODUCTION PREPARATION**
 
 ## Phase 6
 Dashboard Foundation
-**NEXT AFTER PHASE 5 VERIFICATION**
+**IMPLEMENTED / REVIEW**
 
 ## Phase 7
 Portfolio + Investments
+**NEXT**
 
 ## Phase 8
 Deposits + Withdrawals

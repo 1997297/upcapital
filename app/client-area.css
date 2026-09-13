@@ -1,0 +1,55 @@
+/* Scoped client tokens preserve the public website's existing appearance. */
+.client-area {
+  --accent: #b8ff00;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background: var(--background);
+}
+.client-area[data-client-theme="light"] {
+  --background: #f5f7fb;
+  --surface: #ffffff;
+  --surface-elevated: #e9eef5;
+  --primary: #6743d1;
+  --primary-highlight: #5834be;
+  --accent: #426500;
+  --success: #087745;
+  --warning: #885000;
+  --danger: #bb253d;
+  --text-primary: #172033;
+  --text-secondary: #4d5b70;
+  --text-muted: #56647a;
+  --border: #cbd3df;
+  color-scheme: light;
+}
+.client-area :is(button, input, select) {
+  min-height: 44px;
+}
+.client-area input[type="checkbox"] {
+  min-height: 20px;
+  accent-color: var(--primary);
+}
+.client-area [class*="border-white"] {
+  border-color: var(--border);
+}
+.client-area[data-client-theme="light"] [class*="bg-white/"] {
+  background-color: var(--surface);
+}
+.client-area[data-client-theme="light"] [class*="hover:bg-white"]:hover {
+  background-color: var(--surface-elevated);
+}
+.client-area[data-client-theme="light"] a.text-white,
+.client-area[data-client-theme="light"] [class*="hover:text-white"]:hover {
+  color: var(--text-primary);
+}
+.client-area[data-client-theme="light"] .up-glass {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 12px 40px rgb(23 32 51 / 5%);
+}
+.client-area[data-client-theme="light"] .up-kicker {
+  color: var(--accent);
+}
+.client-area .disclosure-dialog::backdrop {
+  background: rgb(8 11 20 / 65%);
+  backdrop-filter: blur(6px);
+}

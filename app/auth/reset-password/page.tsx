@@ -3,7 +3,7 @@ import { AuthHeading } from "@/components/auth/auth-heading";
 import { requireUser } from "@/lib/auth/session";
 export const metadata = { title: "Choose a new password" };
 export default async function Page() {
-  await requireUser();
+  await requireUser(true, "reset-password");
   return (
     <>
       <AuthHeading

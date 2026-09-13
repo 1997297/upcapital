@@ -1,6 +1,23 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { registrationSchema, resetSchema, emailSchema } from "../lib/auth/validation.ts";
+import { authDestination } from "../lib/auth/destination.ts";
+
+test("authentication preserves recovery but rejects unapproved destinations", () => {
+  assert.equal(authDestination("reset-password"), "/auth/reset-password");
+  assert.equal(authDestination("account"), "/auth/account");
+  for (const next of [
+    undefined,
+    null,
+    "https://example.com",
+    "//example.com",
+    "/admin",
+    "%2f%2fexample.com",
+    "../admin",
+  ]) {
+    assert.equal(authDestination(next), "/dashboard");
+  }
+});
 
 const registration = {
   firstName: "Ada",

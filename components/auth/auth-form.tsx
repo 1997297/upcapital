@@ -230,7 +230,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
           )}
         </div>
       )}
-      <div className="flex gap-3">
+      <div className="flex flex-col-reverse gap-3 sm:flex-row">
         {mode === "register" && step > 0 && (
           <Button
             type="button"
@@ -249,7 +249,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
             key="continue"
             type="button"
             variant="secondary"
-            className="flex-1"
+            className="w-full sm:flex-1"
             onClick={(event) => {
               event.preventDefault();
               nextStep();
@@ -263,7 +263,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
             type="submit"
             loading={pending}
             variant="secondary"
-            className="flex-1"
+            className="w-full sm:flex-1"
           >
             {labels[mode]}
           </Button>

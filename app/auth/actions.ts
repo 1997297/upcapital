@@ -78,7 +78,7 @@ export async function login(_: AuthState, form: FormData): Promise<AuthState> {
   } catch {
     return unavailable;
   }
-  redirect("/auth/account");
+  redirect("/dashboard");
 }
 
 export async function forgotPassword(_: AuthState, form: FormData): Promise<AuthState> {
@@ -126,7 +126,7 @@ export async function resendVerification(_: AuthState, form: FormData): Promise<
 export async function resetPassword(_: AuthState, form: FormData): Promise<AuthState> {
   const result = resetSchema.safeParse(Object.fromEntries(form));
   if (!result.success) return validationState(result.error);
-  const { supabase } = await requireUser();
+  const { supabase } = await requireUser(true, "reset-password");
   try {
     const { error } = await supabase.auth.updateUser({ password: result.data.password });
     if (error)

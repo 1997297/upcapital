@@ -1,7 +1,11 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { cache } from "react";
 
-export async function requireUser(requireMfa = true) {
+export const requireUser = cache(async function requireUser(
+  requireMfa = true,
+  next: "dashboard" | "account" | "reset-password" = "dashboard",
+) {
   const supabase = await createClient();
   if (!supabase) redirect("/auth/login");
   const {
@@ -14,6 +18,6 @@ export async function requireUser(requireMfa = true) {
     await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
   if (assuranceError || !assurance) redirect("/auth/login");
   if (requireMfa && assurance.nextLevel === "aal2" && assurance.currentLevel !== "aal2")
-    redirect("/auth/2fa");
+    redirect(`/auth/2fa?next=${next}`);
   return { supabase, user, assurance };
-}
+});

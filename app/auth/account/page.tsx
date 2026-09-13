@@ -30,7 +30,7 @@ export default async function Page() {
       </dl>
       {assurance.nextLevel !== "aal2" && (
         <Link
-          href="/auth/2fa"
+          href="/auth/2fa?next=account"
           className="mt-7 block rounded-xl bg-accent px-5 py-3 text-center text-sm font-semibold text-background"
         >
           Set up two-factor authentication
@@ -40,8 +40,8 @@ export default async function Page() {
         <Link href="/auth/reset-password" className="underline">
           Change password
         </Link>
-        <Link href="/" className="underline">
-          Return to website
+        <Link href="/dashboard" className="underline">
+          Return to dashboard
         </Link>
       </div>
       <form action={logout} className="mt-8 border-t border-white/10 pt-6">

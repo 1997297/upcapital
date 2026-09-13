@@ -8,8 +8,9 @@ A Next.js investment-platform project with a complete public website and shared 
 - Phase 2: reusable UI components and `/design-system`.
 - Phase 3: homepage, refined with shared glass navigation and footer.
 - Phase 4: seven additional public pages and five legal/information pages.
-- Phase 5: Supabase authentication implemented; email delivery configuration and a complete account-flow verification remain pending.
-- Next after authentication verification: Phase 6 dashboard foundation.
+- Phase 5: Supabase authentication implemented; custom SMTP/domain setup and full email-flow verification are deferred to production preparation at the owner's direction.
+- Phase 6: dashboard foundation implemented, with protected access and a development-only component review route.
+- Next: Phase 7 portfolio and investments.
 
 The public pages and authentication routes are implemented. The separate UPCAPITAL Supabase project is connected locally. Transactions, portfolio data and administrative operations remain separate phases. Contact enquiries open the visitor's email application; no message is submitted to a backend.
 
@@ -35,6 +36,7 @@ Use Node.js 22.18+ (Node 24 recommended). On a new checkout, copy `.env.example`
 - `app/`: root layout, homepage, route groups, metadata, sitemap and robots.
 - `app/(marketing)/`: public pages and component showcase.
 - `app/auth/`, `components/auth/`: authentication pages, server actions and forms.
+- `app/dashboard/`, `components/dashboard/`, `lib/dashboard/`: protected shell, overview modules and financial data boundary. During development, `/design-system/dashboard` previews the components without requiring an email setup; that route returns 404 in production.
 - `lib/auth/`, `lib/supabase/`, `proxy.ts`: validation, verified access checks, cookie clients and session refresh.
 - `components/ui/`: shared controls, overlays, typography and table primitives.
 - `components/marketing/`: shared navigation, footer, page layouts, performance panel and contact form.
@@ -44,4 +46,5 @@ Use Node.js 22.18+ (Node 24 recommended). On a new checkout, copy `.env.example`
 
 See [Phase 4 handoff](docs/PHASE_4_PUBLIC_WEBSITE.md) for scope, changed files and verification.
 See [Phase 5 handoff](docs/PHASE_5_AUTHENTICATION.md) for authentication setup and remaining live verification.
-
+Resend is recommended for authentication email delivery. See [email setup](docs/AUTH_EMAIL_SETUP.md) for SMTP configuration and branded templates.
+See [Phase 6 handoff](docs/PHASE_6_DASHBOARD_FOUNDATION.md) for dashboard scope and verification.

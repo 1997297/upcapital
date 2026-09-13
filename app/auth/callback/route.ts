@@ -1,12 +1,10 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { authDestination } from "@/lib/auth/destination";
 
 export async function GET(request: NextRequest) {
   const code = request.nextUrl.searchParams.get("code");
-  const destination =
-    request.nextUrl.searchParams.get("next") === "reset-password"
-      ? "/auth/reset-password"
-      : "/auth/account";
+  const destination = authDestination(request.nextUrl.searchParams.get("next"));
   const origin = process.env.NEXT_PUBLIC_APP_URL || request.nextUrl.origin;
   if (code) {
     try {
